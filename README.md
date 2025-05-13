@@ -55,17 +55,21 @@ Cole este código onde deseja que o formulário apareça:
 
 ### Ou via script (exemplo com preenchimento automático):
 ```javascript 
-  const email = 'usuario@dominio.com';
-  const origem = window.location.hostname;
-  
-  const iframe = document.createElement('iframe');
-  iframe.src = `https://app.galaxies.gg/survey/6812a81a0ebb69d258dceaed?sourcePath=${origem}&email=${encodeURIComponent(email)}`;
-  iframe.style = "position:absolute;top:0;left:0;width:100%;height:100%;border:0;";
-  iframe.setAttribute("allowfullscreen", "");
-  iframe.setAttribute("loading", "lazy");
-  iframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms");
-  
-  document.getElementById('iframe-container').appendChild(iframe);
+  HTML
+    <div id="iframe-container" />
+
+  Javascript
+    const email = 'usuario@dominio.com';
+    const origem = window.location.hostname;
+    
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://app.galaxies.gg/survey/6812a81a0ebb69d258dceaed?sourcePath=${origem}&email=${encodeURIComponent(email)}`;
+    iframe.style = "position:absolute;top:0;left:0;width:100%;height:100%;border:0;";
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("loading", "lazy");
+    iframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms");
+    
+    document.getElementById('iframe-container').appendChild(iframe);
 
 ```
 
