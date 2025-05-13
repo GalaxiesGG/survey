@@ -18,7 +18,7 @@ Use o link da pesquisa fornecido:
 
 Cole este código onde deseja que o formulário apareça:
 
-html
+```html
 <iframe
   src="https://app.galaxies.gg/survey/6812a81a0ebb69d258dceaed"
   title="Formulário Galaxies"
@@ -28,3 +28,4 @@ html
   style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
 >
 </iframe>
+```
