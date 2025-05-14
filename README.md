@@ -1,34 +1,34 @@
-# Integração Iframe – Galaxies Survey
+# Iframe Integration – Galaxies Survey
 
-Este guia mostra como embutir o formulário da Galaxies no seu site usando um `<iframe>` responsivo, seguro e otimizado.
+This guide shows how to embed the Galaxies form on your site using a responsive, secure, and optimized `<iframe>`.
 
 ---
 
-## 🔗 URL do Formulário
+## 🔗 Form URL
 
-Use o link da pesquisa fornecido:
+Use the provided survey link:
 
 **https://app.galaxies.gg/survey/6812a81a0ebb69d258dceaed**
 
-### Parametros
+### Parameters
 
-| Parâmetro    | Exemplo                      | Descrição                                  |
-| ------------ | ---------------------------- | ------------------------------------------ |
-| `sourcePath` | `?sourcePath=meusite.com.br` | Identificador da origem do acesso          |
-| `email`      | `&email=usuario@email.com`   | Preenche automaticamente o campo de e-mail |
+| Parameter    | Example                          | Description                                  |
+| ------------ | -------------------------------- | -------------------------------------------- |
+| `sourcePath` | `?sourcePath=mywebsite.com`      | Identifier of the access origin              |
+| `email`      | `&email=user@email.com`          | Automatically fills in the email field       |
 
 ---
 
-## ✅ Implementação Iframe Survey Básico sem parametros
+## ✅ Basic Iframe Survey Implementation without parameters
 
-### Copie o HTML básico
+### Copy the basic HTML
 
-Cole este código onde deseja que o formulário apareça:
+Paste this code where you want the form to appear:
 
 ```html
 <iframe
   src="https://app.galaxies.gg/survey/6812a81a0ebb69d258dceaed"
-  title="Formulário Galaxies"
+  title="Galaxies Form"
   allowfullscreen
   loading="lazy"
   sandbox="allow-scripts allow-same-origin allow-forms"
@@ -37,13 +37,13 @@ Cole este código onde deseja que o formulário apareça:
 </iframe>
 ```
 
-## ✅ Implementação Iframe Survey com parametros
+## ✅ Iframe Survey Implementation with parameters
 
-### Exemplo fixo (URL direta):
+### Fixed example (direct URL):
 
 ```html
 <iframe
-  src="https://app.galaxies.gg/survey/6812a81a0ebb69d258dceaed?sourcePath=meusite.com.br&email=teste@exemplo.com"
+  src="https://app.galaxies.gg/survey/6812a81a0ebb69d258dceaed?sourcePath=meusite.com.br&email=test@email.com"
   title="Formulário Galaxies"
   allowfullscreen
   loading="lazy"
@@ -53,13 +53,13 @@ Cole este código onde deseja que o formulário apareça:
 
 ```
 
-### Ou via script (exemplo com preenchimento automático):
+### Or via script (example with auto-fill):
 ```javascript 
   HTML
     <div id="iframe-container" />
 
   Javascript
-    const email = 'usuario@dominio.com';
+    const email = 'user@email.com';
     const origem = window.location.hostname;
     
     const iframe = document.createElement('iframe');
